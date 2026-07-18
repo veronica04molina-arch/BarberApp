@@ -8,6 +8,10 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+/**
+ * Representa la entidad Usuario del sistema BarberApp.
+ * Contiene la información de los clientes y barberos registrados.
+ */
 @Entity
 @Table(name = "usuario")
 public class Usuario {

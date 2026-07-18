@@ -5,7 +5,19 @@ import org.springframework.stereotype.Repository;
 
 import com.barberapp.barberapp.model.Usuario;
 
+/**
+ * Repositorio encargado de realizar las operaciones de acceso
+ * a la base de datos para la entidad Usuario.
+ */
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
+    /**
+ * Verifica si existe un usuario con el correo indicado.
+ */
+boolean existsByEmail(String email);
 
+/**
+ * Busca un usuario por correo y contraseña para iniciar sesión.
+ */
+Usuario findByEmailAndPassword(String email, String password);
 }
